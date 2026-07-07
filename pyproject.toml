@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spaced-repetition-engine"
+version = "1.0.0"
+description = "A CLI tool for spaced repetition flashcard study using the SM-2 algorithm."
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Brad Perry", email = "bradperryx@gmail.com"}
+]
+keywords = ["spaced-repetition", "flashcards", "study", "sm2", "memory", "cli"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Education",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Education",
+]
+
+[project.scripts]
+srs = "spaced_repetition_engine.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/bradperryx/spaced-repetition-engine"
+
+[tool.setuptools.packages.find]
+include = ["spaced_repetition_engine*"]
